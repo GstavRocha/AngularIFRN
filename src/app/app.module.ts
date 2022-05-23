@@ -10,12 +10,14 @@ import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
 import { UsuarioListagemComponent } from './usuario-listagem/usuario-listagem.component';
 import { UsuarioDetalheComponent } from './usuario-detalhe/usuario-detalhe.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     UsuarioListagemComponent,
-    UsuarioDetalheComponent
+    UsuarioDetalheComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
