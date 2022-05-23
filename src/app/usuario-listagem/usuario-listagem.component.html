@@ -1,1 +1,24 @@
-<p>usuario-listagem works!</p>
+
+<p-table [value]="usuarios" responsiveLayout="scroll"
+  [paginator]="true" [rows]="5" [showCurrentPageReport]="true"
+  currentPageReportTemplate="Página {first} até {last} de {totalRecords} registros"
+  [rowsPerPageOptions]="[5,10,20]"
+  selectionMode="single" [(selection)]="usuarioSelecionado" dataKey="id"
+  (onRowSelect)="onRowSelect($event)" >
+  <ng-template pTemplate="header">
+      <tr>
+          <th>Código</th>
+          <th>E-mail</th>
+          <th>Nome</th>
+          <th>Sobrenome</th>
+      </tr>
+  </ng-template>
+  <ng-template pTemplate="body" let-usuario>
+      <tr [pSelectableRow]="usuario">
+          <td>{{usuario.id}}</td>
+          <td>{{usuario.email}}</td>
+          <td>{{usuario.first_name}}</td>
+          <td>{{usuario.last_name}}</td>
+      </tr>
+  </ng-template>
+</p-table>
