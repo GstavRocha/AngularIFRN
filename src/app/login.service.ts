@@ -24,5 +24,6 @@ export class LoginService {
   }
   onLogOff(){
     localStorage.clear()
+    return true;
   }
 }
