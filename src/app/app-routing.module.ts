@@ -6,9 +6,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
-  { path: 'listagem', component: UsuarioListagemComponent, canActivate:[AuthGuard]},
-  { path: 'detalhe/:id', component: UsuarioDetalheComponent, canActivate:[AuthGuard] },
-  { path: 'login', component: LoginComponent},
+  { path: 'listagem', component: UsuarioListagemComponent, canActivate: [AuthGuard] },
+  { path: 'detalhe/:id', component: UsuarioDetalheComponent, canActivate: [AuthGuard] },
+  { path: 'login', component: LoginComponent },
   { path: '', redirectTo: '/listagem', pathMatch: 'full' }
 ];
 

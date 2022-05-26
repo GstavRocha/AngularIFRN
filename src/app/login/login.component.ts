@@ -6,11 +6,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+
   usuario = '';
   senha = '';
+
   constructor() { }
 
   ngOnInit(): void {
+  }
+
+  onSubmit(): void {
+    console.log('Tentou logar no sistema...');
+    console.log('Usuário: ' + this.usuario);
+    console.log('Senha: ' + this.senha);
   }
 
 }

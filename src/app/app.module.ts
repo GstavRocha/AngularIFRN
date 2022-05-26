@@ -8,9 +8,13 @@ import { AppComponent } from './app.component';
 
 import { ButtonModule } from 'primeng/button';
 import { TableModule } from 'primeng/table';
+import { InputTextModule } from 'primeng/inputtext';
+import { PasswordModule } from 'primeng/password';
+
 import { UsuarioListagemComponent } from './usuario-listagem/usuario-listagem.component';
 import { UsuarioDetalheComponent } from './usuario-detalhe/usuario-detalhe.component';
 import { LoginComponent } from './login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,9 +26,12 @@ import { LoginComponent } from './login/login.component';
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    FormsModule,
     AppRoutingModule,
     ButtonModule,
     TableModule,
+    InputTextModule,
+    PasswordModule,
     HttpClientModule
   ],
   providers: [],

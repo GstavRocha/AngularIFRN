@@ -6,11 +6,9 @@ import { ActivatedRouteSnapshot, CanActivate, Router, RouterStateSnapshot, UrlTr
 })
 export class AuthGuard implements CanActivate {
 
-  constructor(private router: Router){}
+  constructor (private router: Router) { }
 
-  canActivate(
-    route: ActivatedRouteSnapshot,
-    state: RouterStateSnapshot): boolean | UrlTree {
+  canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): boolean | UrlTree {
     return this.router.parseUrl('/login');
   }
 
