@@ -1,4 +1,3 @@
-import { LoginService } from './../login.service';
 import { UsuarioService } from './../usuario.service';
 import { Usuario } from './../usuario';
 import { Component, OnInit } from '@angular/core';
@@ -14,7 +13,7 @@ export class UsuarioListagemComponent implements OnInit {
   usuarios: Usuario[] = [];
   usuarioSelecionado?: Usuario;
 
-  constructor(private servico: UsuarioService, private router: Router, private login: LoginService) { }
+  constructor(private servico: UsuarioService, private router: Router) { }
 
   ngOnInit(): void {
     this.servico.getAll().subscribe({
@@ -26,9 +25,5 @@ export class UsuarioListagemComponent implements OnInit {
     console.log(event);
     this.router.navigate(['/detalhe', this.usuarioSelecionado?.id]);
   }
-  onLogOff(){
-    if (this.login.onLogOff()){
-      this.router.navigate(['/login']);
-    }
-  }
+
 }
