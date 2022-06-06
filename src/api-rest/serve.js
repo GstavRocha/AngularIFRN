@@ -1,7 +1,9 @@
 const express = require('express');
 const cors = require('cors');
 const app = express();
-app.get('/',(request))
+app.get('/',(req,res) => {
+  res.status(200).send('teste')
+})
 app.get('/usuario',(req, res) => {
   let usuario = []
   usuario.push({
